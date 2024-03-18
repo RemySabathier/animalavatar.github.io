@@ -1,0 +1,1 @@
+Website for "Animal Avatars: Reconstructing Animatable 3D Animals from Casual Videos"
