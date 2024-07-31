@@ -10,4 +10,4 @@ Website for the **ECCV 2024** paper:
 
 <img src="docs/teaser.png" style="width: 60%;">
 
-| [**Project Page**](https://remysabathier.github.io/animalavatar.github.io/) | [**ArXiv**](https://arxiv.org/abs/2403.17103) |
+| [**Project Page**](https://remysabathier.github.io/animalavatar.github.io/) | [**ArXiv**](https://arxiv.org/abs/2403.17103) | [**Code**](https://github.com/facebookresearch/AnimalAvatar?tab=readme-ov-file) |
