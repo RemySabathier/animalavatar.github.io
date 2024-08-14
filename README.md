@@ -1,4 +1,4 @@
-Website for the **ECCV 2024** paper: 
+Website for the **ECCV 2024 (Oral)** paper: 
 
 **Animal Avatar: Reconstructing Animatable 3D Animals from Casual Videos.**
 
