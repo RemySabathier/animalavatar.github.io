@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5VVRTCNB');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Animal Avatars: Reconstructing Animatable 3D Animals from Casual Videos">
+  <meta name="keywords" content="AnimalAvatar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animal Avatars: Reconstructing Animatable 3D Animals from Casual Videos</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VVRTCNB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Animal Avatars: Reconstructing Animatable 3D Animals from Casual Videos</h1>
+            <h2 class="title is-4 publication-title">ECCV 2024 <span style="font-weight:bold; color:rgb(249, 80, 108);">(Oral)</span></h2>   
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://profiles.ucl.ac.uk/96179-remy-sabathier">Remy Sabathier</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://d-novotny.github.io/">David Novotny</a><sup>2</sup>,</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University College London,</span>
+              <span class="author-block"><sup>2</sup>Meta</span>
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <!-- Arxiv Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.17103"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/facebookresearch/AnimalAvatar?tab=readme-ov-file"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+                
+                <!-- Data Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/RemySabathier/animalavatar.github.io/raw/main/external_data/external_data.zip"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                    </a>
+                </span>
+
+                <!-- Oral ECCV link -->
+                <span class="link-block">
+                  <a href="https://eccv2024.ecva.net/virtual/2024/oral/1988"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-check-circle"></i>
+                    </span>
+                    <span>ECCV Oral</span>
+                    </a>
+                </span>
+              </div>
+
+              <!-- More Results Link on a new line -->
+              <div class="publication-links" style="margin-top: 20px;">
+                <span class="link-block">
+                  <a href="index.html"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <span>Main page</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Carousel video -->
+<section class="hero is-light is-small">  
+
+  <div class="hero-body is-centered">
+    <div class="container is-centered">
+      <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
+<!-- ############################################################################## --><!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1009_3157_2796.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1022_15133_10069.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1030_23106_17099.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_591_89070_175572.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1050_43243_38827.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1043_36548_32210.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1009_3094_2348.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1050_43093_37690.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1009_3103_2528.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_518_74410_144191.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_600_92491_183070.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1006_69_348.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1006_75_704.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1010_4414_3789.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1033_26269_19535.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1050_43188_38370.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1047_40116_35067.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1048_41121_36801.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_565_81664_160332.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1013_7089_5359.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1019_13120_8271.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1022_15268_10864.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1023_16110_11841.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1028_21488_15551.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1018_12109_7686.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1037_30410_23055.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_594_90172_179453.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_1046_39156_34275.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_493_70723_136017.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1 flex-container"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/hero_videos/result_NVS_591_89108_176400.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content has-text-centered">
+  <b>Results on scenes from the <a href="https://github.com/facebookresearch/cop3d">COP3D</a> Dataset</b>
+  <br> 
+  <b>(Left to right): Original scene, Texture reconstruction in context, Texture reconstruction, Pose reconstruction</b>
+</div>
+<!-- Carousel video -->
+
+
+<!-- Comparison POSE -->
+<section class="section">  
+  <div class="container is-max-desktop">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">Qualitative comparison: Pose</h2>
+      <div class="content is-centered has-text-centered has-text-justified">
+        <br>
+        <p>
+          <b>Pose prediction (Left to right): Our, BARC, BITE, RAC.</b>
+        </p>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
+<!-- ############################################################################## --><!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1009_3157_2796.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1022_15133_10069.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1030_23106_17099.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_591_89070_175572.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1050_43243_38827.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1043_36548_32210.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1009_3094_2348.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1050_43093_37690.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1009_3103_2528.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_518_74410_144191.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_600_92491_183070.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1006_69_348.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1006_75_704.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1010_4414_3789.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1033_26269_19535.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1050_43188_38370.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1047_40116_35067.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1048_41121_36801.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_565_81664_160332.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1013_7089_5359.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1019_13120_8271.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1022_15268_10864.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1023_16110_11841.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1028_21488_15551.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1018_12109_7686.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1037_30410_23055.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_594_90172_179453.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_1046_39156_34275.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_493_70723_136017.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/pose_videos/result_pose_CAT_591_89108_176400.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+  
+    </div>
+    </div>
+  </div>
+</section>
+<!-- Comparison -->
+
+
+<!-- Comparison Texture -->
+<section class="section">  
+  <div class="container is-max-desktop">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">Qualitative comparison: Texture</h2>
+        <div class="content is-centered has-text-centered has-text-justified">
+          <p>
+            <b>Texture reconstruction (Left to right): Our, RAC.</b>
+          </p>
+        </div>
+  
+      <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
+<!-- ############################################################################## --><!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1009_3157_2796.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1022_15133_10069.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1030_23106_17099.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_591_89070_175572.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1050_43243_38827.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1043_36548_32210.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1009_3094_2348.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1050_43093_37690.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1009_3103_2528.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_518_74410_144191.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_600_92491_183070.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1006_69_348.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1006_75_704.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1010_4414_3789.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1033_26269_19535.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1050_43188_38370.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1047_40116_35067.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1048_41121_36801.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_565_81664_160332.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1013_7089_5359.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1019_13120_8271.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1022_15268_10864.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1023_16110_11841.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1028_21488_15551.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1018_12109_7686.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1037_30410_23055.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_594_90172_179453.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_1046_39156_34275.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_493_70723_136017.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+<div class="item item1"> 
+<video poster="" id="item1" autoplay controls muted loop playsinline height="100%"> 
+<source src="./static/videos/texture_videos/result_text_CAT_591_89108_176400.mp4" type="video/mp4"> 
+</video> 
+</div> 
+<!-- ############################################################################## --> 
+  
+  
+    </div>
+    </div>
+  </div>
+</section>
+<!-- Comparison -->
+
+
+<footer>
+  Template inspired by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies.</a>
+</footer>
+
+</body>
+</html>

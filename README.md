@@ -10,4 +10,4 @@ Website for the **ECCV 2024 (Oral)** paper:
 
 <img src="docs/teaser.png" style="width: 60%;">
 
-| [**Project Page**](https://remysabathier.github.io/animalavatar.github.io/) | [**ArXiv**](https://arxiv.org/abs/2403.17103) | [**Code**](https://github.com/facebookresearch/AnimalAvatar?tab=readme-ov-file) |
+| [**Project Page**](https://remysabathier.github.io/animalavatar.github.io/) | [**ArXiv**](https://arxiv.org/abs/2403.17103) | [**Code**](https://github.com/facebookresearch/AnimalAvatar?tab=readme-ov-file) | [**ECCV Oral**](https://eccv2024.ecva.net/virtual/2024/oral/1988) |
